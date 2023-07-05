@@ -1,6 +1,0 @@
-{
-  "name": "Patient",
-  "version": "0.0.0",
-  "private": true,
-  "main": "../Details.js"
-}
