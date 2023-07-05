@@ -1,8 +1,9 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: https://github.com/khelan-techup/test1.git
     destination: /var/www/html/source
+    overwrite: true
 hooks:
   BeforeInstall:
     - location: scripts/before_install.sh
