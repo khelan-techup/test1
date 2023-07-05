@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: https://github.com/khelan-techup/test1.git
+  - source: https://github.com/khelan-techup/test1/archive/master.zip
     destination: /var/www/html/source
     overwrite: true
 hooks:
