@@ -1,0 +1,11 @@
+.DeleteLinkCls {
+  color: red;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.EditLinkCls {
+  color: blue;
+  text-decoration: underline;
+  font-weight: bold;
+}

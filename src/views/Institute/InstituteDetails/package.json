@@ -1,0 +1,6 @@
+{
+  "name": "Institute",
+  "version": "0.0.0",
+  "private": true,
+  "main": "../Details.js"
+}
