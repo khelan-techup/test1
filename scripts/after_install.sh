@@ -1,4 +1,7 @@
 #!/bin/bash
 
-# Move the React app build files to the deployment directory
-cp -R . /var/www/html
+# Move to the React app directory
+cd /var/www/html
+
+# Install project dependencies
+npm install
