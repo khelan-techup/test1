@@ -1,0 +1,294 @@
+// If you want to override variables do it here
+@import "variables";
+
+// Import styles
+@import "~@coreui/coreui/scss/coreui.scss";
+
+// Temp fix for reactstrap
+@import "~@coreui/coreui/scss/_dropdown-menu-right.scss";
+
+// If you want to add something do it here
+@import "custom";
+
+// ie fixes
+@import "ie-fix";
+
+.nav-dropdown-items {
+  padding-right: 2px !important;
+  padding-left: 9px !important;
+}
+
+.page-title h1 {
+  padding: 0 10px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #323232;
+}
+
+.checkbox-alignment {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-alignment div input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.checkbox-alignment>div>span {
+  font-size: 14px;
+  line-height: 20px;
+  display: block;
+  padding: 15px 0 0 0;
+  padding-left: 2.25rem;
+}
+
+.checkbox-alignment {
+  display: flex;
+  align-items: center;
+}
+
+.all-checkbox-alignment {
+  padding: 0 10px 30px 10px;
+}
+
+.cus-date-picker {
+  input {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #5c6873;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #e4e7ea;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &:focus {
+      color: #5c6873;
+      background-color: #fff;
+      border-color: #4771d8;
+      box-shadow: 0 0 0 0.2rem #1c3a8440;
+      outline: 0;
+    }
+  }
+}
+
+.cus-date-picker input.is-valid {
+  border-color: #4dbd74;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%234dbd74' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center right calc(0.375em + 0.1875rem);
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-position: right calc(0.375em + 0.1875rem) center;
+
+  &:focus {
+    color: #5c6873;
+    background-color: #fff;
+    border-color: #4dbd74;
+    box-shadow: 0 0 0 0.2rem #4dbd7440;
+    outline: 0;
+  }
+}
+
+.cus-date-picker input.is-invalid {
+  border-color: #f86c6b;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23f86c6b' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23f86c6b' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center right calc(0.375em + 0.1875rem);
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-position: right calc(0.375em + 0.1875rem) center;
+
+  &:focus {
+    color: #5c6873;
+    background-color: #fff;
+    border-color: #f86c6b;
+    box-shadow: 0 0 0 0.2rem #f86c6b40;
+    outline: 0;
+  }
+}
+
+.preview-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999999;
+
+  .preview-popup-modal {
+    width: calc(100% - 120px);
+    height: calc(100vh - 140px);
+
+    .preview-popup-header {
+      background-color: #31373c;
+      padding: 12px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+}
+
+//notes css
+.note {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: inset -6px -4px 2px rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  border: 1.5px solid rgba(255, 255, 255, 0.326);
+  color: black;
+  padding: 15px;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  word-wrap: break-word;
+}
+
+.note__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.note textarea {
+  white-space: pre-wrap;
+  background: transparent;
+  border: none;
+  color: black;
+  resize: none;
+  font-size: 15px;
+}
+
+.note textarea:focus {
+  outline: none;
+}
+
+.note textarea::placeholder {
+  color: black;
+}
+
+.note__save {
+  background: transparent;
+  transition: 0.1s ease-in-out;
+  border: 1.5px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  padding: 4px 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.note__save:hover {
+  background: #fff;
+  // border: 1.5px solid #fff;
+  color: blue;
+}
+
+.note__delete {
+  cursor: pointer;
+}
+
+.note__delete:hover {
+  transform: scale(1.1);
+}
+
+.char__progress {
+  background-color: #fff !important;
+}
+
+.modal {
+  display: block !important;
+  /* I added this to see the modal, you don't need this */
+}
+
+/* Important part */
+.modal-dialog {
+  overflow-y: initial !important
+}
+
+.modal-body {
+  // height: 80vh;
+  height: 100%;
+
+  overflow-y: auto;
+}
+
+.ck.ck-balloon-panel {
+  z-index: 10054 !important;
+}
+
+// .modal-backdrop {
+//   // background-color:#e4e5e6;
+//   background-color: rgba(0,0,0,.2);
+
+// }
+// .modal-backdrop.show{
+//   opacity: 10%;
+// }
+// .custom-page-link:hover{
+// cursor: pointer;
+// }
+.page-link:hover {
+  cursor: pointer;
+}
+
+// i.fa {
+//   margin-left: 10px;
+// }
+
+// .custom-page-prev-next-link:hover{
+//   cursor: context-menu;
+//   }
+
+
+.tag-item {
+  background-color: #d4d5d6;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 30px;
+  height: 30px;
+  padding: 0 4px 0 1rem;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0.3rem 0.3rem 0;
+}
+
+.tag-item>.button {
+  background-color: white;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  margin-left: 10px;
+  font-weight: bold;
+  padding: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MuiFormControl-root.MuiTextField-root.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+  width: 100%;
+}
+
+.react-multi-email.empty>span[data-placeholder] {
+  color: #7c7b7b !important;
+}
