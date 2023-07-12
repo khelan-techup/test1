@@ -3,7 +3,7 @@ pipeline {
      stages {
         stage("Build") {
             steps {
-                sh 'echo "techup" | sudo -S npm install'
+                sh 'echo "D#2J$5A&8P" | sudo -S npm install'
                 sh "sudo npm run build"
             }
         }
