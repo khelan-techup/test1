@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                sh 'echo "techup" | -S npm install'
+                sh ' npm install'
                 sh " npm run build"
             }
         }
