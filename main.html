@@ -1,0 +1,114 @@
+{% extends "master.html" %}
+{% block content %}
+
+<h1>Welcome To My Tennis Club</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Registration Form</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-group .submit-btn {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    Other HTML code
+    <form method="post" action="main.html">
+
+      {% csrf_token %}
+      <!-- Form fields and submit button -->
+    </form>
+  </div>
+
+  <div class="container">
+    <h1>Registration Form</h1>
+
+    <!-- <form method="post" action="{% url 'success' %}"> -->
+    <form method="post" action="success/">
+      <!-- {% csrf_token %} -->
+
+      <div class="form-group">
+        <label for="firstname">First Name:</label>
+        <input type="text" id="first-name" name="first_name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="firstname">Last Name:</label>
+        <input type="text" id="last-name" name="last_name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="joined_date">Joined Date:</label>
+        <input type="date" id="joined_date" name="joined_date" required>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" value="Submit" class="submit-btn">
+        <!-- <form method="post" action="{% url 'success' %}"> -->
+        <form method="post" action="success.html">
+
+          {% csrf_token %}
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>
+
+
+<h3>Members</h3>
+
+<p>Check out all our <a href="members/">members</a></p>
+
+{% endblock %}
